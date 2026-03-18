@@ -1,0 +1,25 @@
+version: "3.9"
+services:
+ backend:
+  build: ./Server
+  container_name: Job_portal_server
+  restart: always
+  ports:
+  - "5000:5000"
+  env_file:
+  - ./Server/.env
+  volumes:
+  - ./Server:/app
+  - /app/node_modules
+
+ frontend:
+  build: ./Client/client
+  container_name: job_portal_client
+  restart: always
+  ports:
+  - "5173:5173"
+  depends_on:
+  - backend
+  volumes:
+  - ./Client/client:/app
+  - /app/node_modules
