@@ -15,7 +15,7 @@ const app = express();
 // Middleware
 app.use(express.json());
 app.use(cors({
-   origin: "https://your-frontend-url.vercel.app",
+    origin: "https://job-portal-main-project-1.vercel.app",
   credentials: true,
 }));
 
