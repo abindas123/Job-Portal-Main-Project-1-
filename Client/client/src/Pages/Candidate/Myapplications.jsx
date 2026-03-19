@@ -70,7 +70,7 @@ export default function MyApplications(){
         <Stack spacing={2}>
             {applications.map((application)=>{
               
-                const job=application.JobId||{}
+                const job=application.jobid||{}
                  
                 return(
                   
