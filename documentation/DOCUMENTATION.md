@@ -8,16 +8,24 @@ Docker is used to containerize the application, making it easy to run the projec
 
 2. Screenshots
 
-Add screenshots of your application here.
 
-Examples:
 Home Page
+<img width="1918" height="1078" alt="Home page new" src="https://github.com/user-attachments/assets/233b2849-a706-49c5-a978-f58a2a2d352a" />
+
 Login Page
-Register Page
-Job Listings
-Job Filtering
-Pagination
+<img width="1900" height="1078" alt="Login Page" src="https://github.com/user-attachments/assets/374a77cc-afc8-43c4-aa54-c847fc88aaa5" />
+
+My applications page(candidate)
+<img width="1902" height="1070" alt="My applications page" src="https://github.com/user-attachments/assets/f77f0dcb-be32-4bd7-89d5-e725af017e0e" />
+Jod Details
+<img width="1918" height="1078" alt="Job details" src="https://github.com/user-attachments/assets/8520e278-3e06-4bfd-bfb6-8d0042f4f234" />
+Create Job
+<img width="1915" height="1077" alt="create job employer" src="https://github.com/user-attachments/assets/6538b727-d29d-4ac6-9d78-8f0828713c59" />
+Employer My jobs
+<img width="1912" height="1078" alt="my jobs emploeyr" src="https://github.com/user-attachments/assets/ad23a407-77cc-40a2-8fba-47c4577bb98c" />
+
 Employer Dashboard
+<img width="1918" height="1078" alt="Employer dashboard" src="https://github.com/user-attachments/assets/65853c04-d68f-437d-887e-8dfbdd1259a2" />
 
 3. Features
 
