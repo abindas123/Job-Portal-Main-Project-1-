@@ -2,6 +2,7 @@ import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
 import User from "../Models/User.js";
 
+
 function SignToken(user) {
   return jwt.sign(
     { UserId: user._id.toString(), role: user.role },
@@ -15,6 +16,10 @@ export const register = async (req, res) => {
 
     if (!name || !email || !password || !role) {
       return res.status(400).json({ message: "name, email, password, role are required" });
+    }
+    const existing= await User.findOne({email})
+    if(existing){
+      return res.status(400).json({message:"email already exist"})
     }
     if (!["candidate", "employer"].includes(role)) {
       return res.status(400).json({ message: "role must be candidate or employer" });

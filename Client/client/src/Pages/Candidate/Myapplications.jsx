@@ -24,10 +24,10 @@ export default function MyApplications() {
       setError("");
 
       const res = await getMyApplications();
-     
+       console.log("RAW DATA:", res.data);
 
       const data = Array.isArray(res.data) ? res.data : res.data.applications || [];
-
+    
       const validApplications = data.filter(
         (application) => application.jobId 
       );
