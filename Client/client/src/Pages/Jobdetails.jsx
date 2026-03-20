@@ -89,7 +89,7 @@ export default function Jobdetails(){
 return(
     <Card>
         <CardContent>
-            <Typography variant="h4" fontWeight={700} gutterBottom>
+            <Typography variant="h4" fontWeight={500} gutterBottom>
                 {jobs.title}
 
             </Typography>

@@ -66,7 +66,7 @@ export default function MyApplications() {
 
   return (
     <Box>
-      <Typography variant="h4" fontWeight={800} gutterBottom>
+      <Typography variant="h4" fontWeight={500} gutterBottom>
         My Applications
       </Typography>
 
