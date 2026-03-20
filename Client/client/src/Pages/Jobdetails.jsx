@@ -52,7 +52,7 @@ export default function Jobdetails(){
         console.log("applyresponse",res.data)
         setsuccess("applied to job successfully")
         }catch(err){
-             console.error("Apply error:", err);
+             console.error("Apply error:", err.message);
       seterror(
         err?.response?.data?.message ||
           err?.response?.data?.error ||

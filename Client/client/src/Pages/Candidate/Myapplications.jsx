@@ -24,14 +24,15 @@ export default function MyApplications() {
       setError("");
 
       const res = await getMyApplications();
+     
 
       const data = Array.isArray(res.data) ? res.data : res.data.applications || [];
 
       const validApplications = data.filter(
-        (application) => application.jobid && application.jobid._id
+        (application) => application.jobId 
       );
 
-      console.log("Applications:", validApplications);
+      
       setApplications(validApplications);
     } catch (err) {
       console.error("Fetch applications error:", err);
@@ -81,7 +82,7 @@ export default function MyApplications() {
 
       <Stack spacing={2}>
         {applications.map((application, index) => {
-          const job = application.jobid || {};
+          const job = application.jobId || {};
 
           return (
             <Card key={application._id || application.id || index}>

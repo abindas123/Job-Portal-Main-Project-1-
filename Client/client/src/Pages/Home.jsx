@@ -149,7 +149,7 @@ export default function Home(){
     {!loading&&jobs.length==0&&( <Typography>No jobs found.</Typography>)}
     <Stack spacing={2}>
         {jobs.map((job)=>(
-            <Card key={job.id}>
+            <Card key={job._id}>
                 <CardContent>
                      <Typography variant="h6" fontWeight={700}>
                 {job.title}
