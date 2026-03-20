@@ -1,9 +1,10 @@
-import { AppBar, Toolbar, Typography, Button, Stack } from "@mui/material";
+import { AppBar, Toolbar, Typography, Button, Stack,Box } from "@mui/material";
 import { Link as RouterLink, useNavigate } from "react-router-dom";
 import { useAuth } from "../Context/Authcontext";
 
 export default function Navbar() {
-  const { isAuthed, role, logout } = useAuth();
+  const { isAuthed, role, logout, } = useAuth();
+  const user = JSON.parse(localStorage.getItem("user"));
   const navigate = useNavigate();
 
   const handleLogout = () => {
@@ -34,11 +35,23 @@ export default function Navbar() {
               </Button>
             </>
           )}
+          {isAuthed&&(
+                     <Box sx={{ display: "flex", justifyContent: "center" }}>
+                       <Typography>
+                           Hi, {user.name}
+                       </Typography>
+                        </Box>
+          )}
 
           {isAuthed && role === "candidate" && (
+            <Box>
+       
+                 
             <Button color="inherit" component={RouterLink} to="/candidate/applications">
               My Applications
             </Button>
+            </Box>
+            
           )}
 
           {isAuthed && role === "employer" && (
